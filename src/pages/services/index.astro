@@ -1,0 +1,107 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTASection from "../../components/CTASection.astro";
+
+const groups = [
+  {
+    title: "Emotional & Mental Health",
+    description:
+      "Support for anxiety, stress, depression, trauma, phobias, addiction, and sleep concerns — in a safe, confidential space.",
+    href: "/services/individual-therapy/",
+    cta: "Explore Individual Therapy",
+    items: [
+      "Anxiety, stress, depression & panic attacks",
+      "OCD & intrusive thoughts",
+      "Trauma, abuse & stress-related concerns",
+      "Fear, phobia & panic support",
+      "Addiction recovery support",
+      "Sleep problems & insomnia",
+      "Psychological & rehabilitation support",
+      "Screen addiction support",
+    ],
+  },
+  {
+    title: "Relationship & Family Support",
+    description:
+      "Counseling for couples, families, and parents navigating conflict, trust, and connection.",
+    href: "/services/couples-family-counseling/",
+    cta: "Explore Couples & Family Counseling",
+    items: [
+      "Relationship issues & marital conflict",
+      "Couple counseling",
+      "Family & parent counseling",
+      "Narcissistic abuse recovery",
+      "Women's mental health & postpartum support",
+      "Emotional & behavioral concerns",
+    ],
+  },
+  {
+    title: "Adolescent & Teen Counseling",
+    description:
+      "Age-appropriate support for teens navigating school stress, self-esteem, friendships, and family conflict.",
+    href: "/services/teen-adolescent-counseling/",
+    cta: "Explore Teen Counseling",
+    items: [
+      "Anxiety & low mood in teens",
+      "School & academic stress",
+      "Screen addiction",
+      "Friendships & peer pressure",
+      "Family conflict",
+      "Self-esteem & confidence",
+    ],
+  },
+  {
+    title: "Lifestyle, Career & Growth",
+    description:
+      "Guidance for career transitions, workplace burnout, and corporate mental health programs.",
+    href: "/services/corporate-workplace-wellness/",
+    cta: "Explore Corporate & Workplace Wellness",
+    items: [
+      "Career guidance & counseling",
+      "Workplace mental health & burnout support",
+      "Financial stress counseling",
+      "Body image & weight management counseling",
+      "Self-esteem & confidence building",
+      "Academic stress & exam anxiety",
+      "Corporate Employee Assistance Programs (EAP)",
+      "School mental health & wellness programs",
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Therapy & Counseling Services in Hyderabad"
+  description="Explore Liam Mind Care's therapy services: individual therapy, couples & family counseling, teen counseling, and corporate workplace wellness — in Hyderabad and online."
+>
+  <section class="mx-auto max-w-5xl px-5 py-16 text-center md:px-8">
+    <h1 class="font-serif text-4xl font-semibold text-navy-900">Our Services</h1>
+    <p class="mx-auto mt-4 max-w-2xl text-navy-700">
+      Compassionate, evidence-based psychological therapy and counseling — tailored to individuals, couples,
+      teens, and organizations. Available in-person in Hyderabad and online worldwide.
+    </p>
+  </section>
+
+  <section class="mx-auto max-w-5xl space-y-6 px-5 pb-16 md:px-8">
+    {groups.map((group) => (
+      <div class="rounded-2xl border border-blue-100 p-8">
+        <h2 class="font-serif text-2xl font-semibold text-navy-900">{group.title}</h2>
+        <p class="mt-2 text-navy-700">{group.description}</p>
+        <ul class="mt-5 grid grid-cols-1 gap-x-6 gap-y-2 text-sm text-navy-700 sm:grid-cols-2">
+          {group.items.map((item) => (
+            <li class="flex items-start gap-2">
+              <span class="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-500"></span>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <a href={group.href} class="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-blue-600 hover:text-blue-700">
+          {group.cta}
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    ))}
+  </section>
+
+  <CTASection />
+</BaseLayout>

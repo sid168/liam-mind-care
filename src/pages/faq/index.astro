@@ -1,0 +1,70 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import FAQItem from "../../components/FAQItem.astro";
+import CTASection from "../../components/CTASection.astro";
+import { site } from "../../data/site";
+
+const faqs = [
+  {
+    q: "How do I book a session?",
+    a: "Reach out via WhatsApp, phone, or the contact form. We'll confirm a time that works for you. Sessions are strictly by appointment.",
+  },
+  {
+    q: "Do you offer online sessions?",
+    a: "Yes — online counseling is available worldwide via secure video call, alongside in-person sessions in Hyderabad (Narsingi, Manikonda, Kokapet, and Tolichowki).",
+  },
+  {
+    q: "Is everything I share confidential?",
+    a: "Yes. All services are strictly confidential and handled with complete discretion, in line with professional ethical standards.",
+  },
+  {
+    q: "Do I need a diagnosis or referral to start therapy?",
+    a: "No. You don't need a prior diagnosis or referral to begin. Many clients come simply to talk through stress, relationships, or life transitions.",
+  },
+  {
+    q: "What's the difference between a psychologist and a psychiatrist?",
+    a: "A psychologist provides talk therapy and behavioral interventions, while a psychiatrist is a medical doctor who can prescribe medication. Iqra Ali is a psychologist; if medication is needed, she can refer you to a trusted psychiatrist for collaborative care.",
+  },
+  {
+    q: "How long are sessions?",
+    a: "Individual and teen sessions run 60 minutes. Couple and family sessions run up to 90 minutes.",
+  },
+  {
+    q: "What languages are sessions available in?",
+    a: "Sessions are conducted in English and Hindi/Urdu.",
+  },
+  {
+    q: "Is this suitable for a mental health emergency?",
+    a: "No. If you or someone you know is in crisis, please contact your local emergency services or go to the nearest hospital immediately. This website does not provide emergency or crisis support.",
+  },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+---
+
+<BaseLayout
+  title="FAQs | Liam Mind Care"
+  description="Answers to common questions about booking, confidentiality, session formats, and pricing at Liam Mind Care, Hyderabad."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <section class="mx-auto max-w-3xl px-5 py-16 md:px-8">
+    <h1 class="text-center font-serif text-4xl font-semibold text-navy-900">Frequently Asked Questions</h1>
+    <div class="mt-10 space-y-3">
+      {faqs.map((f) => <FAQItem question={f.q}>{f.a}</FAQItem>)}
+    </div>
+    <p class="mt-8 text-center text-sm text-navy-700">
+      Still have questions? <a href={`https://wa.me/${site.whatsappRaw}`} target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 hover:text-blue-700">Message us on WhatsApp</a>.
+    </p>
+  </section>
+
+  <CTASection />
+</BaseLayout>

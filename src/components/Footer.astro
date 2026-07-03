@@ -1,0 +1,65 @@
+---
+import { site } from "../data/site";
+
+const services = [
+  { href: "/services/individual-therapy/", label: "Individual Therapy" },
+  { href: "/services/couples-family-counseling/", label: "Couples & Family Counseling" },
+  { href: "/services/teen-adolescent-counseling/", label: "Teen & Adolescent Counseling" },
+  { href: "/services/corporate-workplace-wellness/", label: "Corporate & Workplace Wellness" },
+];
+---
+
+<footer class="bg-navy-950 text-blue-100">
+  <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-4 md:px-8">
+    <div>
+      <span class="font-serif text-xl font-semibold text-white">LIAM Mind Care</span>
+      <p class="mt-3 text-sm leading-relaxed text-blue-200">
+        Professional, confidential psychological therapy and counseling — online and in-person in Hyderabad.
+      </p>
+      <div class="mt-4 flex gap-3">
+        <a href={site.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="rounded-full bg-navy-800 p-2 hover:bg-blue-600">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.7 0 3 .01 4.1.06 1.1.05 1.85.22 2.5.48.68.26 1.25.62 1.82 1.18a5 5 0 0 1 1.18 1.82c.26.65.43 1.4.48 2.5.05 1.1.06 1.4.06 4.1s-.01 3-.06 4.1c-.05 1.1-.22 1.85-.48 2.5a5 5 0 0 1-1.18 1.82 5 5 0 0 1-1.82 1.18c-.65.26-1.4.43-2.5.48-1.1.05-1.4.06-4.1.06s-3-.01-4.1-.06c-1.1-.05-1.85-.22-2.5-.48a5 5 0 0 1-1.82-1.18 5 5 0 0 1-1.18-1.82c-.26-.65-.43-1.4-.48-2.5C2.01 15 2 14.7 2 12s.01-3 .06-4.1c.05-1.1.22-1.85.48-2.5A5 5 0 0 1 3.72 3.58 5 5 0 0 1 5.54 2.4c.65-.26 1.4-.43 2.5-.48C8.99 2.01 9.3 2 12 2Zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4Zm5.4-8.4a1.17 1.17 0 1 1-2.33 0 1.17 1.17 0 0 1 2.33 0Z"/></svg>
+        </a>
+        <a href={site.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="rounded-full bg-navy-800 p-2 hover:bg-blue-600">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v6h3v-6h3l1-3h-4v-2c0-.6.4-1 1-1Z"/></svg>
+        </a>
+        <a href={site.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="rounded-full bg-navy-800 p-2 hover:bg-blue-600">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 8.5H4V20h2.94V8.5ZM5.47 4a1.7 1.7 0 1 0 0 3.4 1.7 1.7 0 0 0 0-3.4ZM20 13.3c0-3-1.6-4.4-3.8-4.4-1.7 0-2.5 1-2.9 1.6V8.5H10.4c.04.9 0 11.5 0 11.5h2.94v-6.4c0-.35.02-.7.13-.94.28-.7.9-1.4 1.96-1.4 1.4 0 1.96 1.06 1.96 2.6V20H20v-6.7Z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="text-sm font-semibold uppercase tracking-wide text-white">Services</h3>
+      <ul class="mt-3 space-y-2 text-sm">
+        {services.map((s) => <li><a href={s.href} class="text-blue-200 hover:text-white">{s.label}</a></li>)}
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-sm font-semibold uppercase tracking-wide text-white">Quick Links</h3>
+      <ul class="mt-3 space-y-2 text-sm">
+        <li><a href="/about/" class="text-blue-200 hover:text-white">About Iqra Ali</a></li>
+        <li><a href="/faq/" class="text-blue-200 hover:text-white">FAQs</a></li>
+        <li><a href="/contact/" class="text-blue-200 hover:text-white">Contact</a></li>
+        <li><a href={`https://wa.me/${site.whatsappRaw}`} target="_blank" rel="noopener noreferrer" class="text-blue-200 hover:text-white">Book on WhatsApp</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-sm font-semibold uppercase tracking-wide text-white">Get in Touch</h3>
+      <ul class="mt-3 space-y-2 text-sm text-blue-200">
+        <li><a href={`tel:${site.phoneRaw}`} class="hover:text-white">{site.phoneDisplay}</a> <span class="text-blue-400">(by appointment)</span></li>
+        <li><a href={`mailto:${site.email}`} class="hover:text-white">{site.email}</a></li>
+        <li>{site.address.full}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="border-t border-navy-800 py-5 text-center text-xs text-blue-300">
+    <p>&copy; {new Date().getFullYear()} Liam Mind Care. All rights reserved. | <a href="/terms/" class="hover:text-white">Terms &amp; Conditions</a></p>
+    <p class="mt-2 mx-auto max-w-2xl px-4 text-blue-400">
+      If you are experiencing a medical or psychiatric emergency, please contact your local emergency services or go to the nearest hospital immediately. This website does not provide emergency support.
+    </p>
+  </div>
+</footer>

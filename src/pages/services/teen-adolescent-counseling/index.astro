@@ -1,0 +1,40 @@
+---
+import ServiceLayout from "../../../layouts/ServiceLayout.astro";
+
+const concerns = [
+  "Anxiety & low mood in teens",
+  "School & academic stress, exam anxiety",
+  "Screen & social media addiction",
+  "Friendships & peer pressure",
+  "Family conflict",
+  "Self-esteem & confidence",
+  "Behavioral changes",
+  "Life transitions (school changes, growing up)",
+];
+---
+
+<ServiceLayout
+  seoTitle="Teen & Adolescent Counseling in Hyderabad | Therapist for Teens"
+  seoDescription="Age-appropriate counseling for teens and adolescents in Hyderabad and online — anxiety, school stress, screen addiction, self-esteem, and family conflict, with parent consultation available."
+  eyebrow="Adolescent & Teen Counseling"
+  heading="Support for Teens, Guidance for Families"
+  intro="A safe space for teens to talk openly, build coping skills, and navigate the pressures of school, friendships, and growing up — with age-appropriate techniques and optional parent consultation."
+  concerns={concerns}
+  format={[
+    { label: "Session length", value: "60 minutes" },
+    { label: "Delivery", value: "Online worldwide or in-person in Hyderabad" },
+    { label: "Languages", value: "English, Hindi/Urdu" },
+    { label: "Booking", value: "By appointment only" },
+  ]}
+>
+  <h2 class="font-serif text-2xl font-semibold text-navy-900">Our Approach</h2>
+  <p class="mt-4 leading-relaxed text-navy-700">
+    Teen counseling combines age-appropriate coping skills with a non-judgmental space where adolescents feel
+    genuinely heard. Sessions can include parent consultations to support the whole family, while keeping the
+    teen's trust and confidentiality at the center of the process.
+  </p>
+  <p class="mt-4 leading-relaxed text-navy-700">
+    We also support schools and families dealing with screen addiction, academic pressure, and the emotional
+    ups and downs of adolescence.
+  </p>
+</ServiceLayout>

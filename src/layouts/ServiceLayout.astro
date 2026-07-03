@@ -1,0 +1,70 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import CTASection from "../components/CTASection.astro";
+
+interface Props {
+  seoTitle: string;
+  seoDescription: string;
+  eyebrow: string;
+  heading: string;
+  intro: string;
+  concernsTitle?: string;
+  concerns: string[];
+  format: { label: string; value: string }[];
+}
+
+const {
+  seoTitle,
+  seoDescription,
+  eyebrow,
+  heading,
+  intro,
+  concernsTitle = "What We Help With",
+  concerns,
+  format,
+} = Astro.props;
+---
+
+<BaseLayout title={seoTitle} description={seoDescription}>
+  <section class="bg-blue-100/60 py-14">
+    <div class="mx-auto max-w-4xl px-5 text-center md:px-8">
+      <p class="text-xs font-semibold uppercase tracking-wide text-blue-600">{eyebrow}</p>
+      <h1 class="mt-2 font-serif text-4xl font-semibold text-navy-900">{heading}</h1>
+      <p class="mx-auto mt-4 max-w-2xl text-navy-700">{intro}</p>
+    </div>
+  </section>
+
+  <section class="mx-auto grid max-w-5xl gap-10 px-5 py-14 md:grid-cols-[1fr_260px] md:px-8">
+    <div>
+      <h2 class="font-serif text-2xl font-semibold text-navy-900">{concernsTitle}</h2>
+      <ul class="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+        {concerns.map((c) => (
+          <li class="flex items-start gap-2 rounded-lg border border-blue-100 px-4 py-3 text-sm text-navy-700">
+            <span class="mt-0.5 shrink-0 text-blue-500">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            {c}
+          </li>
+        ))}
+      </ul>
+
+      <div class="mt-10">
+        <slot />
+      </div>
+    </div>
+
+    <aside class="h-fit rounded-2xl border border-blue-100 p-6">
+      <h3 class="font-serif text-lg font-semibold text-navy-900">Session Format</h3>
+      <dl class="mt-4 space-y-3 text-sm">
+        {format.map((f) => (
+          <div>
+            <dt class="font-semibold text-navy-800">{f.label}</dt>
+            <dd class="text-navy-700">{f.value}</dd>
+          </div>
+        ))}
+      </dl>
+    </aside>
+  </section>
+
+  <CTASection />
+</BaseLayout>

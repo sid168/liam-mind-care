@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { site } from "../../data/site";
+---
+
+<BaseLayout
+  title="Terms & Conditions | Liam Mind Care"
+  description="Terms and conditions for using the Liam Mind Care website and booking therapy sessions."
+  noIndex
+>
+  <section class="mx-auto max-w-3xl px-5 py-16 md:px-8">
+    <h1 class="font-serif text-4xl font-semibold text-navy-900">Terms & Conditions</h1>
+    <div class="prose mt-8 space-y-5 text-sm leading-relaxed text-navy-700">
+      <p><strong>Note to owner:</strong> This is placeholder legal content — please have it reviewed by a lawyer before going live, particularly regarding cancellation/refund policy and data handling for a mental health practice in India.</p>
+
+      <h2 class="font-serif text-xl font-semibold text-navy-900">1. Appointments</h2>
+      <p>All sessions at Liam Mind Care are strictly by appointment. Please contact us in advance via phone, WhatsApp, or the contact form to schedule a session.</p>
+
+      <h2 class="font-serif text-xl font-semibold text-navy-900">2. Confidentiality</h2>
+      <p>All information shared during sessions is treated as strictly confidential and handled with complete discretion, in accordance with professional ethical standards, except where disclosure is required by law (for example, where there is risk of serious harm to yourself or others).</p>
+
+      <h2 class="font-serif text-xl font-semibold text-navy-900">3. Not for Emergencies</h2>
+      <p>This website and our services are not intended for medical or psychiatric emergencies. If you or someone you know is in crisis, please contact your local emergency services or go to the nearest hospital immediately.</p>
+
+      <h2 class="font-serif text-xl font-semibold text-navy-900">4. Scope of Services</h2>
+      <p>Iqra Ali is a psychologist offering talk therapy and counseling. We do not prescribe medication. Where clinically appropriate, we may refer you to a psychiatrist or other medical professional.</p>
+
+      <h2 class="font-serif text-xl font-semibold text-navy-900">5. Cancellations</h2>
+      <p>Please provide as much notice as possible if you need to reschedule or cancel a session.</p>
+
+      <h2 class="font-serif text-xl font-semibold text-navy-900">6. Contact</h2>
+      <p>Questions about these terms can be sent to <a class="text-blue-600" href={`mailto:${site.email}`}>{site.email}</a>.</p>
+    </div>
+  </section>
+</BaseLayout>

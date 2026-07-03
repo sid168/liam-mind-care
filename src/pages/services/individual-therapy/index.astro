@@ -1,0 +1,42 @@
+---
+import ServiceLayout from "../../../layouts/ServiceLayout.astro";
+
+const concerns = [
+  "Anxiety & panic attacks",
+  "Depression & low mood",
+  "Stress & burnout",
+  "OCD & intrusive thoughts",
+  "Trauma & abuse recovery",
+  "Phobias & fears",
+  "Addiction recovery support",
+  "Sleep problems & insomnia",
+  "Postpartum & women's mental health",
+  "Life transitions",
+];
+---
+
+<ServiceLayout
+  seoTitle="Individual Therapy in Hyderabad | Anxiety, Depression & Stress Counseling"
+  seoDescription="One-on-one individual therapy in Hyderabad and online, for anxiety, depression, stress, trauma, and sleep concerns. Evidence-based, confidential care with psychologist Iqra Ali."
+  eyebrow="Individual Therapy"
+  heading="One-on-One Therapy for Emotional Wellbeing"
+  intro="A safe, supportive, and strictly confidential space to work through anxiety, depression, stress, and life's transitions — at your own pace."
+  concerns={concerns}
+  format={[
+    { label: "Session length", value: "60 minutes" },
+    { label: "Delivery", value: "Online worldwide or in-person in Hyderabad" },
+    { label: "Languages", value: "English, Hindi/Urdu" },
+    { label: "Booking", value: "By appointment only" },
+  ]}
+>
+  <h2 class="font-serif text-2xl font-semibold text-navy-900">Our Approach</h2>
+  <p class="mt-4 leading-relaxed text-navy-700">
+    Individual therapy sessions draw on Cognitive Behavioral Therapy (CBT), DBT-informed techniques,
+    psychodynamic therapy, and solution-focused approaches — tailored to what you need, not a one-size-fits-all
+    script. Every session is delivered with warmth, respect, and complete discretion.
+  </p>
+  <p class="mt-4 leading-relaxed text-navy-700">
+    Whether you're managing a diagnosed condition or simply need a space to think out loud, no referral or
+    prior diagnosis is required to begin.
+  </p>
+</ServiceLayout>

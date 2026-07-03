@@ -1,0 +1,24 @@
+export const site = {
+  name: "Liam Mind Care",
+  tagline: "Therapy that meets you with care and clarity",
+  founder: "Iqra Ali",
+  founderTitle: "Psychologist & Founder, Liam Mind Care",
+  phoneDisplay: "+91 91542 00760",
+  phoneRaw: "+919154200760",
+  whatsappRaw: "919154200760",
+  email: "hello@liammindcare.com",
+  address: {
+    line1: "Flat No. 502, 3-16/5/42 & 43",
+    line2: "Marva Township, Narsingi, Gandipet",
+    line3: "R.R. District, Telangana, India",
+    full: "Flat No. 502, 3-16/5/42 & 43, Marva Township, Narsingi, Gandipet, R.R. Dist., Telangana, India",
+  },
+  serviceAreas: ["Narsingi", "Gandipet", "Manikonda", "Kokapet", "Tolichowki", "Hyderabad"],
+  hours: "By appointment only",
+  social: {
+    instagram: "https://instagram.com/liammindcare",
+    facebook: "https://facebook.com/liammindcare",
+    linkedin: "https://linkedin.com/company/liammindcare",
+  },
+  url: "https://liammindcare.com",
+} as const;

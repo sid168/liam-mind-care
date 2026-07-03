@@ -1,0 +1,101 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTASection from "../../components/CTASection.astro";
+
+const credentials = [
+  "BA in Psychology",
+  "MA in Psychology",
+  "MBA in Human Resources",
+  "Advanced training in Positive Psychology",
+  "General Psychiatric Management for Borderline Personality Disorder — Harvard Medical School",
+];
+
+const approaches = [
+  "Cognitive Behavioral Therapy (CBT)",
+  "Dialectical Behavior Therapy (DBT-informed)",
+  "Psychodynamic Therapy",
+  "Positive Psychology",
+  "Solution-Focused Therapy",
+];
+
+const specializations = [
+  "Women's mental health & postpartum depression",
+  "Anxiety, panic attacks & depression",
+  "Sleep difficulties",
+  "Substance use & addiction recovery",
+  "Adolescent & teen counseling",
+  "Couples & family therapy",
+  "Workplace mental health",
+  "Phobias & trauma-related concerns",
+];
+---
+
+<BaseLayout
+  title="About Iqra Ali | Psychologist, Liam Mind Care Hyderabad"
+  description="Meet Iqra Ali, founder and psychologist at Liam Mind Care — 7+ years across clinical, educational, and corporate settings, with advanced training from Harvard Medical School."
+>
+  <section class="mx-auto max-w-5xl px-5 py-16 md:px-8">
+    <div class="grid gap-10 md:grid-cols-[280px_1fr] md:items-start">
+      <div class="mx-auto flex h-56 w-56 items-center justify-center rounded-full bg-blue-100 md:mx-0">
+        <svg width="90" height="90" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#12296b" stroke-width="1.5"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#12296b" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-wide text-blue-600">About the Founder</p>
+        <h1 class="mt-2 font-serif text-4xl font-semibold text-navy-900">Iqra Ali</h1>
+        <p class="mt-1 text-navy-700">Psychologist &amp; Founder, Liam Mind Care</p>
+        <p class="mt-5 leading-relaxed text-navy-700">
+          Iqra Ali is a psychologist with over seven years of experience spanning clinical, educational, and
+          corporate settings, including work as an HR and Industrial Psychologist with FFAST, a Middle East
+          safety company. She holds a BA and MA in Psychology and an MBA in Human Resources, along with advanced
+          training in Positive Psychology and General Psychiatric Management for Borderline Personality Disorder
+          from Harvard Medical School.
+        </p>
+        <p class="mt-4 leading-relaxed text-navy-700">
+          She is also the author of <em>Mothering</em> and <em>Narcissism Unveiled</em>, and practices an
+          integrative, trauma-informed approach — drawing on CBT, DBT, psychodynamic, and solution-focused
+          therapy to meet each client where they are.
+        </p>
+        <blockquote class="mt-6 border-l-4 border-blue-400 pl-5 italic text-navy-800">
+          "Seeking support is not a weakness — it is a courageous step toward healing, resilience, and
+          transformation."
+        </blockquote>
+        <p class="mt-4 leading-relaxed text-navy-700">
+          Iqra's mission is to destigmatize mental health conversations and make quality psychological care
+          accessible to diverse populations with cultural sensitivity — whether you're navigating anxiety,
+          relationship challenges, parenthood, or a career crossroads.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-blue-100/60 py-16">
+    <div class="mx-auto grid max-w-5xl gap-10 px-5 md:grid-cols-2 md:px-8">
+      <div>
+        <h2 class="font-serif text-2xl font-semibold text-navy-900">Credentials & Training</h2>
+        <ul class="mt-4 space-y-2 text-sm text-navy-700">
+          {credentials.map((c) => <li class="flex gap-2"><span class="text-blue-500">•</span>{c}</li>)}
+        </ul>
+      </div>
+      <div>
+        <h2 class="font-serif text-2xl font-semibold text-navy-900">Therapeutic Approaches</h2>
+        <ul class="mt-4 space-y-2 text-sm text-navy-700">
+          {approaches.map((a) => <li class="flex gap-2"><span class="text-blue-500">•</span>{a}</li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-5 py-16 md:px-8">
+    <h2 class="text-center font-serif text-2xl font-semibold text-navy-900">Areas of Specialization</h2>
+    <div class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
+      {specializations.map((s) => (
+        <div class="rounded-xl border border-blue-100 px-4 py-3 text-center text-sm text-navy-800">{s}</div>
+      ))}
+    </div>
+  </section>
+
+  <CTASection
+    heading="Ready to talk to Iqra?"
+    subheading="Reach out for a confidential, no-pressure conversation about how therapy can help you."
+  />
+</BaseLayout>
