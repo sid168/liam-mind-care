@@ -1,6 +1,14 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTASection from "../../components/CTASection.astro";
+import InstagramEmbed from "../../components/InstagramEmbed.astro";
+import { site } from "../../data/site";
+
+const instagramPosts = [
+  "https://www.instagram.com/reel/DZw2Z1OzE05/",
+  "https://www.instagram.com/p/DYzSzooTUf5/",
+  "https://www.instagram.com/reel/DXbLYIGk1Dw/",
+];
 
 const space = Array.from({ length: 8 }, (_, i) => `/images/space/space-${i + 1}.jpeg`);
 const certificates = Array.from({ length: 11 }, (_, i) => `/images/certificates/cert-${i + 1}.jpeg`);
@@ -20,6 +28,18 @@ const community = [
     <p class="mx-auto mt-4 max-w-2xl text-navy-700">
       A look inside our space, our training, and the work we're proud of.
     </p>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 pb-16 md:px-8">
+    <div class="flex items-baseline justify-between">
+      <h2 class="font-serif text-2xl font-semibold text-navy-900">Recent Work on Instagram</h2>
+      <a href="https://www.instagram.com/liammindcare/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-blue-600 hover:text-blue-700">
+        Follow @liammindcare →
+      </a>
+    </div>
+    <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3">
+      {instagramPosts.map((url) => <InstagramEmbed url={url} />)}
+    </div>
   </section>
 
   <section class="mx-auto max-w-6xl px-5 pb-16 md:px-8">
@@ -73,4 +93,6 @@ const community = [
   </section>
 
   <CTASection />
+
+  <script is:inline async src="https://www.instagram.com/embed.js"></script>
 </BaseLayout>

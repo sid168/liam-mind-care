@@ -9,6 +9,8 @@ interface Props {
   eyebrow: string;
   heading: string;
   intro: string;
+  heroImage: string;
+  heroImageAlt: string;
   concernsTitle?: string;
   concerns: string[];
   format: { label: string; value: string }[];
@@ -20,6 +22,8 @@ const {
   eyebrow,
   heading,
   intro,
+  heroImage,
+  heroImageAlt,
   concernsTitle = "What We Help With",
   concerns,
   format,
@@ -28,10 +32,15 @@ const {
 
 <BaseLayout title={seoTitle} description={seoDescription}>
   <section class="bg-blue-100/60 py-14">
-    <div class="mx-auto max-w-4xl px-5 text-center md:px-8">
-      <p class="text-xs font-semibold uppercase tracking-wide text-blue-600">{eyebrow}</p>
-      <h1 class="mt-2 font-serif text-4xl font-semibold text-navy-900">{heading}</h1>
-      <p class="mx-auto mt-4 max-w-2xl text-navy-700">{intro}</p>
+    <div class="mx-auto grid max-w-5xl items-center gap-8 px-5 md:grid-cols-[1.1fr_1fr] md:px-8">
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-wide text-blue-600">{eyebrow}</p>
+        <h1 class="mt-2 font-serif text-4xl font-semibold text-navy-900">{heading}</h1>
+        <p class="mt-4 text-navy-700">{intro}</p>
+      </div>
+      <div class="aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-md">
+        <img src={heroImage} alt={heroImageAlt} class="h-full w-full object-cover" />
+      </div>
     </div>
   </section>
 

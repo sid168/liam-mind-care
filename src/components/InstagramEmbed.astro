@@ -1,0 +1,10 @@
+---
+interface Props {
+  url: string;
+}
+const { url } = Astro.props;
+---
+
+<blockquote class="instagram-media w-full" data-instgrm-permalink={url} data-instgrm-version="14" style="margin:0; width:100%;">
+  <a href={url} target="_blank" rel="noopener noreferrer">View on Instagram</a>
+</blockquote>
