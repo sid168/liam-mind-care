@@ -1,0 +1,41 @@
+---
+import ServiceLayout from "../../../layouts/ServiceLayout.astro";
+
+const concerns = [
+  "Autism screening & assessment",
+  "ADHD screening & assessment",
+  "Learning disability assessment",
+  "Psychometric & IQ testing",
+  "Developmental delay concerns",
+  "Behavioral & attention difficulties",
+  "School readiness evaluation",
+  "Post-assessment guidance for parents",
+];
+---
+
+<ServiceLayout
+  seoTitle="Autism & ADHD Screening in Hyderabad | Psychological Assessments"
+  seoDescription="Autism screening, ADHD screening, and psychometric assessments in Hyderabad and online. Clear, compassionate evaluation and guidance for children, teens, and adults."
+  eyebrow="Psychological Assessments"
+  heading="Autism, ADHD & Psychological Screening"
+  intro="Clear, compassionate assessment for autism, ADHD, and learning differences — with guidance you can actually use, for children, teens, and adults."
+  concerns={concerns}
+  format={[
+    { label: "Formats", value: "Screening interviews, standardized tools, parent/caregiver consultation" },
+    { label: "Delivery", value: "In-person in Hyderabad (online consultation available)" },
+    { label: "Languages", value: "English, Hindi/Urdu" },
+    { label: "Booking", value: "By appointment only" },
+  ]}
+>
+  <h2 class="font-serif text-2xl font-semibold text-navy-900">Our Approach</h2>
+  <p class="mt-4 leading-relaxed text-navy-700">
+    An autism or ADHD screening can feel like a big, uncertain step — for a child, a teen, or yourself as an
+    adult. We keep the process warm and unhurried: understanding your concerns, using appropriate screening
+    tools, and walking through the results together in plain language, not just a clinical report.
+  </p>
+  <p class="mt-4 leading-relaxed text-navy-700">
+    Where a fuller diagnostic workup is needed, we'll guide you toward the right next step and stay involved
+    through follow-up support, school consultation, or family guidance — you're not left to interpret results
+    on your own.
+  </p>
+</ServiceLayout>

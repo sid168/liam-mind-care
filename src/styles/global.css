@@ -4,16 +4,17 @@
   --font-sans: "Inter", system-ui, sans-serif;
   --font-serif: "Fraunces", Georgia, serif;
 
-  --color-navy-950: #081338;
-  --color-navy-900: #0b1b4a;
-  --color-navy-800: #12296b;
-  --color-navy-700: #1a3585;
-  --color-blue-600: #1e56a0;
-  --color-blue-500: #2f6fc4;
-  --color-blue-400: #6fa8e0;
-  --color-blue-200: #cfe3f7;
-  --color-blue-100: #e7f1fb;
-  --color-cream: #f8fafc;
+  --color-navy-950: #0c1c42;
+  --color-navy-900: #16265c;
+  --color-navy-800: #1d3373;
+  --color-navy-700: #2a4590;
+  --color-blue-600: #2e63ad;
+  --color-blue-500: #4a80cc;
+  --color-blue-400: #82b1e5;
+  --color-blue-200: #d5e6f8;
+  --color-blue-100: #eaf3fc;
+  --color-sky-50: #f5f9fd;
+  --color-cream: #fbfaf6;
 }
 
 html {
@@ -23,4 +24,10 @@ html {
 body {
   font-family: var(--font-sans);
   color: var(--color-navy-900);
+  background-color: var(--color-cream);
+  line-height: 1.65;
+}
+
+::selection {
+  background-color: var(--color-blue-200);
 }

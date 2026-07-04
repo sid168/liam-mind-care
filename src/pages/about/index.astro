@@ -3,11 +3,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTASection from "../../components/CTASection.astro";
 
 const credentials = [
-  "BA in Psychology",
+  "PhD Scholar — Clinical Psychology",
   "MA in Psychology",
+  "BA in Psychology",
   "MBA in Human Resources",
   "Advanced training in Positive Psychology",
   "General Psychiatric Management for Borderline Personality Disorder — Harvard Medical School",
+  "Research Internship in Health Psychology — IIT Hyderabad & HACOS",
+  "Community Mental Health Internship — Manastha Health Solutions",
 ];
 
 const approaches = [
@@ -19,6 +22,8 @@ const approaches = [
 ];
 
 const specializations = [
+  "Autism screening & support",
+  "ADHD screening & support",
   "Women's mental health & postpartum depression",
   "Anxiety, panic attacks & depression",
   "Sleep difficulties",
@@ -28,47 +33,63 @@ const specializations = [
   "Workplace mental health",
   "Phobias & trauma-related concerns",
 ];
+
+const certificates = [
+  "/images/certificates/cert-1.jpeg",
+  "/images/certificates/cert-3.jpeg",
+  "/images/certificates/cert-9.jpeg",
+  "/images/certificates/cert-2.jpeg",
+  "/images/certificates/cert-6.jpeg",
+  "/images/certificates/cert-10.jpeg",
+];
+
+const media = [
+  "/images/media-coverage/media-1.jpeg",
+  "/images/media-coverage/media-2.jpeg",
+  "/images/media-coverage/media-3.jpeg",
+];
 ---
 
 <BaseLayout
-  title="About Iqra Ali | Psychologist, Liam Mind Care Hyderabad"
-  description="Meet Iqra Ali, founder and psychologist at Liam Mind Care — 7+ years across clinical, educational, and corporate settings, with advanced training from Harvard Medical School."
+  title="About Iqra Ali | PhD Scholar & Psychologist, Liam Mind Care Hyderabad"
+  description="Meet Iqra Ali, PhD Scholar in Clinical Psychology and founder of Liam Mind Care — 7+ years across clinical, educational, and corporate settings, with advanced training from Harvard Medical School."
 >
   <section class="mx-auto max-w-5xl px-5 py-16 md:px-8">
-    <div class="grid gap-10 md:grid-cols-[280px_1fr] md:items-start">
-      <div class="mx-auto flex h-56 w-56 items-center justify-center rounded-full bg-blue-100 md:mx-0">
-        <svg width="90" height="90" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#12296b" stroke-width="1.5"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#12296b" stroke-width="1.5" stroke-linecap="round"/></svg>
+    <div class="grid gap-10 md:grid-cols-[300px_1fr] md:items-start">
+      <div class="mx-auto w-full max-w-[300px] overflow-hidden rounded-[2rem] shadow-sm md:mx-0">
+        <img src="/images/space/space-1.jpeg" alt="Iqra Ali's therapy office at Liam Mind Care" class="h-full w-full object-cover" />
       </div>
       <div>
         <p class="text-xs font-semibold uppercase tracking-wide text-blue-600">About the Founder</p>
         <h1 class="mt-2 font-serif text-4xl font-semibold text-navy-900">Iqra Ali</h1>
-        <p class="mt-1 text-navy-700">Psychologist &amp; Founder, Liam Mind Care</p>
+        <p class="mt-1 text-navy-700">PhD Scholar (Clinical Psychology) &amp; Founder, Liam Mind Care</p>
         <p class="mt-5 leading-relaxed text-navy-700">
-          Iqra Ali is a psychologist with over seven years of experience spanning clinical, educational, and
-          corporate settings, including work as an HR and Industrial Psychologist with FFAST, a Middle East
-          safety company. She holds a BA and MA in Psychology and an MBA in Human Resources, along with advanced
-          training in Positive Psychology and General Psychiatric Management for Borderline Personality Disorder
-          from Harvard Medical School.
+          Iqra Ali is a psychologist and PhD Scholar in Clinical Psychology with over seven years of experience
+          spanning clinical, educational, and corporate settings, including work as an HR and Industrial
+          Psychologist with FFAST, a Middle East safety company. She holds an MA and BA in Psychology and an MBA
+          in Human Resources, along with advanced training in Positive Psychology and General Psychiatric
+          Management for Borderline Personality Disorder from Harvard Medical School.
         </p>
         <p class="mt-4 leading-relaxed text-navy-700">
           She is also the author of <em>Mothering</em> and <em>Narcissism Unveiled</em>, and practices an
           integrative, trauma-informed approach — drawing on CBT, DBT, psychodynamic, and solution-focused
           therapy to meet each client where they are.
         </p>
-        <blockquote class="mt-6 border-l-4 border-blue-400 pl-5 italic text-navy-800">
+        <blockquote class="mt-6 rounded-2xl bg-blue-100/60 border-l-4 border-blue-400 px-5 py-4 italic text-navy-800">
           "Seeking support is not a weakness — it is a courageous step toward healing, resilience, and
           transformation."
         </blockquote>
         <p class="mt-4 leading-relaxed text-navy-700">
           Iqra's mission is to destigmatize mental health conversations and make quality psychological care
           accessible to diverse populations with cultural sensitivity — whether you're navigating anxiety,
-          relationship challenges, parenthood, or a career crossroads.
+          relationship challenges, parenthood, a developmental concern like autism or ADHD, or a career
+          crossroads.
         </p>
       </div>
     </div>
   </section>
 
-  <section class="bg-blue-100/60 py-16">
+  <section class="bg-blue-100/50 py-16">
     <div class="mx-auto grid max-w-5xl gap-10 px-5 md:grid-cols-2 md:px-8">
       <div>
         <h2 class="font-serif text-2xl font-semibold text-navy-900">Credentials & Training</h2>
@@ -89,8 +110,57 @@ const specializations = [
     <h2 class="text-center font-serif text-2xl font-semibold text-navy-900">Areas of Specialization</h2>
     <div class="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
       {specializations.map((s) => (
-        <div class="rounded-xl border border-blue-100 px-4 py-3 text-center text-sm text-navy-800">{s}</div>
+        <div class="rounded-2xl border border-blue-100 px-4 py-3 text-center text-sm text-navy-800">{s}</div>
       ))}
+    </div>
+  </section>
+
+  <section class="bg-blue-100/50 py-16">
+    <div class="mx-auto max-w-5xl px-5 md:px-8">
+      <div class="flex items-baseline justify-between">
+        <h2 class="font-serif text-2xl font-semibold text-navy-900">Certifications & Training</h2>
+        <a href="/gallery/" class="text-sm font-semibold text-blue-600 hover:text-blue-700">View full gallery →</a>
+      </div>
+      <div class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
+        {certificates.map((src) => (
+          <div class="overflow-hidden rounded-xl border border-blue-200 bg-white shadow-sm">
+            <img src={src} alt="Iqra Ali certification" class="h-40 w-full object-cover" loading="lazy" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-5 py-16 md:px-8">
+    <h2 class="font-serif text-2xl font-semibold text-navy-900">Published Work</h2>
+    <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+      <div class="flex gap-4 rounded-2xl border border-blue-100 p-5">
+        <img src="/images/books/mothering.png" alt="Mothering book cover by Iqra Ali" class="h-32 w-24 rounded-lg object-cover shadow" />
+        <div>
+          <h3 class="font-serif text-lg font-semibold text-navy-900">Mothering</h3>
+          <p class="mt-1 text-sm text-navy-700">A guide to raising happy and confident children.</p>
+        </div>
+      </div>
+      <div class="flex gap-4 rounded-2xl border border-blue-100 p-5">
+        <img src="/images/books/narcissism-unveiled.png" alt="Narcissism Unveiled book cover by Iqra Ali" class="h-32 w-24 rounded-lg object-cover shadow" />
+        <div>
+          <h3 class="font-serif text-lg font-semibold text-navy-900">Narcissism Unveiled</h3>
+          <p class="mt-1 text-sm text-navy-700">From personal struggles to societal influence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-blue-100/50 py-16">
+    <div class="mx-auto max-w-5xl px-5 md:px-8">
+      <h2 class="font-serif text-2xl font-semibold text-navy-900">In the Media</h2>
+      <div class="mt-6 grid grid-cols-3 gap-4">
+        {media.map((src) => (
+          <div class="overflow-hidden rounded-xl border border-blue-200 bg-white shadow-sm">
+            <img src={src} alt="Media coverage of Iqra Ali" class="h-56 w-full object-cover" loading="lazy" />
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 

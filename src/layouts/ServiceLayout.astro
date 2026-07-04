@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import CTASection from "../components/CTASection.astro";
+import { site } from "../data/site";
 
 interface Props {
   seoTitle: string;
@@ -63,6 +64,12 @@ const {
           </div>
         ))}
       </dl>
+      <div class="mt-5 border-t border-blue-100 pt-4">
+        <p class="text-sm font-semibold text-navy-800">Fees</p>
+        <p class="mt-1 text-sm text-navy-700">
+          Reach out on <a href={`https://wa.me/${site.whatsappRaw}`} target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 hover:text-blue-700">WhatsApp</a> for current session rates.
+        </p>
+      </div>
     </aside>
   </section>
 

@@ -1,0 +1,76 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTASection from "../../components/CTASection.astro";
+
+const space = Array.from({ length: 8 }, (_, i) => `/images/space/space-${i + 1}.jpeg`);
+const certificates = Array.from({ length: 11 }, (_, i) => `/images/certificates/cert-${i + 1}.jpeg`);
+const media = Array.from({ length: 3 }, (_, i) => `/images/media-coverage/media-${i + 1}.jpeg`);
+const community = [
+  { src: "/images/student-engagement/shri-ram-academy.jpeg", caption: "Peace & Conflict Resolution session at Shri Ram Academy, Hyderabad" },
+  { src: "/images/student-engagement/gsss-cheema-jodhpur.jpeg", caption: "Mental health awareness session at PM Shree GSSS Cheema Jodhpur School" },
+];
+---
+
+<BaseLayout
+  title="Gallery | Liam Mind Care"
+  description="A look inside Liam Mind Care — our therapy space in Hyderabad, Iqra Ali's certifications and training, published books, media coverage, and community mental health work."
+>
+  <section class="mx-auto max-w-5xl px-5 py-16 text-center md:px-8">
+    <h1 class="font-serif text-4xl font-semibold text-navy-900">Gallery</h1>
+    <p class="mx-auto mt-4 max-w-2xl text-navy-700">
+      A look inside our space, our training, and the work we're proud of.
+    </p>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 pb-16 md:px-8">
+    <h2 class="font-serif text-2xl font-semibold text-navy-900">Our Space</h2>
+    <p class="mt-2 text-navy-700">A calm, welcoming environment designed to put you at ease.</p>
+    <div class="mt-6 columns-2 gap-4 sm:columns-3 md:columns-4 [&>*]:mb-4">
+      {space.map((src) => (
+        <img src={src} alt="Liam Mind Care therapy space" class="w-full rounded-2xl object-cover shadow-sm" loading="lazy" />
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-blue-100/50 py-16">
+    <div class="mx-auto max-w-6xl px-5 md:px-8">
+      <h2 class="font-serif text-2xl font-semibold text-navy-900">Certifications & Training</h2>
+      <p class="mt-2 text-navy-700">Iqra Ali's ongoing professional development and training credentials.</p>
+      <div class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+        {certificates.map((src) => (
+          <div class="overflow-hidden rounded-xl border border-blue-200 bg-white shadow-sm">
+            <img src={src} alt="Certification" class="h-44 w-full object-cover" loading="lazy" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 py-16 md:px-8">
+    <h2 class="font-serif text-2xl font-semibold text-navy-900">Media Coverage</h2>
+    <div class="mt-6 grid grid-cols-3 gap-4">
+      {media.map((src) => (
+        <div class="overflow-hidden rounded-xl border border-blue-200 bg-white shadow-sm">
+          <img src={src} alt="Media coverage of Liam Mind Care" class="h-56 w-full object-cover sm:h-72" loading="lazy" />
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-blue-100/50 py-16">
+    <div class="mx-auto max-w-6xl px-5 md:px-8">
+      <h2 class="font-serif text-2xl font-semibold text-navy-900">Community & School Engagement</h2>
+      <p class="mt-2 text-navy-700">Bringing mental health awareness into schools and communities.</p>
+      <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+        {community.map((item) => (
+          <figure class="overflow-hidden rounded-2xl border border-blue-200 bg-white shadow-sm">
+            <img src={item.src} alt={item.caption} class="h-56 w-full object-cover" loading="lazy" />
+            <figcaption class="p-4 text-sm text-navy-700">{item.caption}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</BaseLayout>

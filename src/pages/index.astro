@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTASection from "../components/CTASection.astro";
 import FAQItem from "../components/FAQItem.astro";
+import WaveDivider from "../components/WaveDivider.astro";
 import { site } from "../data/site";
 
 const pillars = [
@@ -30,6 +31,18 @@ const pillars = [
     ],
   },
   {
+    title: "Psychological Assessments",
+    href: "/services/psychological-assessments/",
+    items: [
+      "Autism screening & assessment",
+      "ADHD screening & assessment",
+      "Learning disability assessment",
+      "Psychometric & IQ testing",
+      "Developmental delay concerns",
+      "School readiness evaluation",
+    ],
+  },
+  {
     title: "Lifestyle, Career & Growth",
     href: "/services/corporate-workplace-wellness/",
     items: [
@@ -45,7 +58,7 @@ const pillars = [
 
 const trustPoints = [
   "7+ years clinical, educational & corporate experience",
-  "Advanced training from Harvard Medical School",
+  "PhD Scholar, trained at Harvard Medical School",
   "In-person in Hyderabad + online worldwide",
   "Strictly confidential, judgment-free space",
 ];
@@ -53,21 +66,23 @@ const trustPoints = [
 
 <BaseLayout
   title="Liam Mind Care | Psychological Therapy & Counseling in Hyderabad"
-  description="Confidential psychological therapy and counseling in Hyderabad and online worldwide. Evidence-based support for anxiety, depression, relationships, teens, and workplace stress with psychologist Iqra Ali."
+  description="Confidential psychological therapy and counseling in Hyderabad and online worldwide. Evidence-based support for anxiety, depression, relationships, autism/ADHD screening, teens, and workplace stress with psychologist Iqra Ali."
 >
-  <section class="relative overflow-hidden bg-gradient-to-b from-blue-100 via-white to-white">
+  <section class="relative overflow-hidden bg-gradient-to-b from-blue-100 via-sky-50 to-cream">
     <div class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 md:grid-cols-2 md:py-24 md:px-8">
       <div>
         <p class="inline-block rounded-full bg-blue-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-blue-600">
           Center for Mental Well-Being
         </p>
         <h1 class="mt-4 font-serif text-4xl font-semibold leading-tight text-navy-900 md:text-5xl">
-          Professional Psychological Therapy & Counseling in Hyderabad
+          A Calm, Confidential Space to Feel Better
         </h1>
-        <p class="mt-5 text-lg text-navy-700">
-          {site.tagline}. Compassionate, evidence-based support for anxiety, depression, relationships,
-          teens, and life's toughest transitions — in person in Hyderabad or online, wherever you are.
+        <p class="mt-5 text-lg leading-relaxed text-navy-700">
+          {site.tagline}. Compassionate, evidence-based psychological therapy and counseling in Hyderabad and
+          online worldwide — for anxiety, depression, relationships, autism & ADHD screening, teens, and life's
+          toughest transitions.
         </p>
+        <p class="mt-3 text-sm italic text-blue-600">You don't have to have it all figured out. You just have to start.</p>
         <div class="mt-8 flex flex-wrap gap-3">
           <a
             href={`https://wa.me/${site.whatsappRaw}`}
@@ -94,17 +109,14 @@ const trustPoints = [
         </ul>
       </div>
       <div class="relative">
-        <div class="aspect-square w-full rounded-[2.5rem] bg-gradient-to-br from-navy-800 to-blue-500 p-1 shadow-xl">
-          <div class="flex h-full w-full flex-col items-center justify-center rounded-[2.3rem] bg-blue-100 text-center">
-            <svg width="120" height="120" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-              <circle cx="20" cy="20" r="19" stroke="#12296b" stroke-width="1.2" fill="#ffffff"/>
-              <path d="M20 10c-4 0-7 3-7 7 0 3 2 5 3 6.5V27a1 1 0 001 1h6a1 1 0 001-1v-3.5c1-1.5 3-3.5 3-6.5 0-4-3-7-7-7z" stroke="#12296b" stroke-width="1.2" fill="none"/>
-            </svg>
-            <p class="mt-4 max-w-[220px] text-sm font-medium text-navy-800">
-              "A safe, welcoming space where I felt truly heard and understood."
-            </p>
-            <p class="mt-2 text-xs font-semibold uppercase tracking-wide text-blue-600">— Client H.</p>
-          </div>
+        <div class="aspect-[4/5] w-full overflow-hidden rounded-[2.5rem] shadow-xl">
+          <img src="/images/space/space-8.jpeg" alt="Warm, welcoming waiting area at Liam Mind Care" class="h-full w-full object-cover" />
+        </div>
+        <div class="absolute -bottom-6 left-1/2 w-[85%] -translate-x-1/2 rounded-2xl bg-white p-5 text-center shadow-lg">
+          <p class="text-sm font-medium text-navy-800">
+            "A safe, welcoming space where I felt truly heard and understood."
+          </p>
+          <p class="mt-2 text-xs font-semibold uppercase tracking-wide text-blue-600">— Client H.</p>
         </div>
       </div>
     </div>
@@ -117,9 +129,9 @@ const trustPoints = [
         Whatever brought you here, there is a path forward. Explore the areas we support most often.
       </p>
     </div>
-    <div class="mt-10 grid gap-6 md:grid-cols-3">
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
       {pillars.map((pillar) => (
-        <a href={pillar.href} class="group flex flex-col rounded-2xl border border-blue-100 p-7 transition-shadow hover:shadow-lg">
+        <a href={pillar.href} class="group flex flex-col rounded-3xl border border-blue-100 bg-white p-7 transition-shadow hover:shadow-lg">
           <div class="flex h-14 w-14 items-center justify-center rounded-full bg-blue-100 text-blue-600">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-8.5C.75 9 2.5 5.5 6 5c2-.3 3.5.7 6 3 2.5-2.3 4-3.3 6-3 3.5.5 5.25 4 3.5 7.5C19 16.65 12 21 12 21Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
           </div>
@@ -136,17 +148,18 @@ const trustPoints = [
     </div>
   </section>
 
-  <section class="bg-blue-100/60 py-16">
+  <section class="bg-blue-100/50 py-16">
     <div class="mx-auto grid max-w-6xl items-center gap-10 px-5 md:grid-cols-2 md:px-8">
-      <div class="order-2 flex justify-center md:order-1">
-        <div class="flex h-64 w-64 items-center justify-center rounded-full bg-white shadow-md">
-          <svg width="100" height="100" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#12296b" stroke-width="1.5"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#12296b" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <div class="order-2 md:order-1">
+        <div class="aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-md">
+          <img src="/images/space/space-2.jpeg" alt="Comfortable therapy room at Liam Mind Care" class="h-full w-full object-cover" />
         </div>
       </div>
       <div class="order-1 md:order-2">
         <p class="text-xs font-semibold uppercase tracking-wide text-blue-600">Meet Your Psychologist</p>
         <h2 class="mt-2 font-serif text-3xl font-semibold text-navy-900">Iqra Ali</h2>
-        <p class="mt-4 text-navy-700">
+        <p class="mt-1 text-sm font-medium text-blue-600">PhD Scholar — Clinical Psychology</p>
+        <p class="mt-4 leading-relaxed text-navy-700">
           With 7+ years of experience across clinical, educational, and corporate settings, Iqra brings an
           integrative, trauma-informed approach drawing from CBT, DBT, psychodynamic, and solution-focused
           therapy — including advanced training in General Psychiatric Management for Borderline Personality
@@ -186,5 +199,6 @@ const trustPoints = [
     </div>
   </section>
 
+  <WaveDivider toColor="#16265c" />
   <CTASection />
 </BaseLayout>

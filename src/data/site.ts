@@ -2,11 +2,11 @@ export const site = {
   name: "Liam Mind Care",
   tagline: "Therapy that meets you with care and clarity",
   founder: "Iqra Ali",
-  founderTitle: "Psychologist & Founder, Liam Mind Care",
+  founderTitle: "PhD Scholar (Clinical Psychology) & Founder, Liam Mind Care",
   phoneDisplay: "+91 91542 00760",
   phoneRaw: "+919154200760",
   whatsappRaw: "919154200760",
-  email: "hello@liammindcare.com",
+  email: "therapybyiqra@liammindcare.com",
   address: {
     line1: "Flat No. 502, 3-16/5/42 & 43",
     line2: "Marva Township, Narsingi, Gandipet",
