@@ -64,6 +64,29 @@ const pillars = [
   },
 ];
 
+const testimonials = [
+  {
+    quote: "From the very first session ma'am created a safe, welcoming space where I felt truly heard and understood.",
+    attribution: "Client H.",
+  },
+  {
+    quote: "On a scale 1–10, I was on 0 when we began the session and I was having a nervous breakdown.",
+    attribution: "Client S., UK",
+  },
+  {
+    quote: "She has been really helpful in changing my thought process and listened to me efficiently.",
+    attribution: "Client N., India",
+  },
+  {
+    quote: "You helped me untangle my thoughts! You helped me with my anxiety. Following your technique worked for me.",
+    attribution: "Client M., India",
+  },
+  {
+    quote: "Mam spoke softly with me and I'm able to open up easily, the techniques she taught me was useful.",
+    attribution: "Client, India",
+  },
+];
+
 const trustPoints = [
   "7+ years clinical, educational & corporate experience",
   "PhD Scholar, trained at Harvard Medical School",
@@ -184,6 +207,22 @@ const trustPoints = [
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 py-16 md:px-8">
+    <div class="text-center">
+      <h2 class="font-serif text-3xl font-semibold text-navy-900">What Clients Say</h2>
+      <p class="mx-auto mt-3 max-w-2xl text-navy-700">Real words from people who found their way to a calmer place.</p>
+    </div>
+    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {testimonials.map((t) => (
+        <div class="flex flex-col rounded-3xl border border-blue-100 bg-white p-7">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="text-blue-300"><path d="M9.5 7C6.5 7 4 9.5 4 12.5c0 2.5 1.7 4.5 4 4.9-.3 1.4-1.3 2.4-2.6 2.9v1.7c3-.4 5.6-2.9 5.6-6.5V7H9.5Zm9 0c-3 0-5.5 2.5-5.5 5.5 0 2.5 1.7 4.5 4 4.9-.3 1.4-1.3 2.4-2.6 2.9v1.7c3-.4 5.6-2.9 5.6-6.5V7h-1.5Z" fill="currentColor"/></svg>
+          <p class="mt-4 flex-1 text-navy-700">"{t.quote}"</p>
+          <p class="mt-5 text-sm font-semibold uppercase tracking-wide text-blue-600">— {t.attribution}</p>
+        </div>
+      ))}
     </div>
   </section>
 
