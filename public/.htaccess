@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Redirect www to non-www (matches liammindcare.com as canonical)
+RewriteCond %{HTTP_HOST} ^www\.liammindcare\.com [NC]
+RewriteRule ^(.*)$ https://liammindcare.com/$1 [L,R=301]
+
+# Pretty URLs / directory index fallback
+DirectoryIndex index.html
+
+# Custom 404
+ErrorDocument 404 /404.html
