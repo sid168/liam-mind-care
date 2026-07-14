@@ -12,7 +12,23 @@ const instagramPosts = [
 
 const space = Array.from({ length: 8 }, (_, i) => `/images/space/space-${i + 1}.jpeg`);
 const certificates = Array.from({ length: 11 }, (_, i) => `/images/certificates/cert-${i + 1}.jpeg`);
-const media = Array.from({ length: 3 }, (_, i) => `/images/media-coverage/media-${i + 1}.jpeg`);
+const media = [
+  "/images/media-coverage/media-1.jpeg",
+  "/images/media-coverage/media-2.jpeg",
+  "/images/media-coverage/media-3.jpeg",
+  "/images/media-coverage/media-7-aadab-telangana.jpeg",
+  "/images/media-coverage/media-8-etemaad-daily.jpeg",
+  "/images/media-coverage/media-4-akstv-1.jpeg",
+  "/images/media-coverage/media-5-akstv-2.jpeg",
+  "/images/media-coverage/media-6-99tv.jpeg",
+];
+const rehabOutreach = [
+  "/images/rehab-outreach/rehab-2.jpeg",
+  "/images/rehab-outreach/rehab-5.jpeg",
+  "/images/rehab-outreach/rehab-1.jpeg",
+  "/images/rehab-outreach/rehab-4.jpeg",
+  "/images/rehab-outreach/rehab-3.jpeg",
+];
 const community = [
   { src: "/images/student-engagement/shri-ram-academy.jpeg", caption: "Peace & Conflict Resolution session at Shri Ram Academy, Hyderabad" },
   { src: "/images/student-engagement/gsss-cheema-jodhpur.jpeg", caption: "Mental health awareness session at PM Shree GSSS Cheema Jodhpur School" },
@@ -68,10 +84,11 @@ const community = [
 
   <section class="mx-auto max-w-6xl px-5 py-16 md:px-8">
     <h2 class="font-serif text-2xl font-semibold text-navy-900">Media Coverage</h2>
-    <div class="mt-6 grid grid-cols-3 gap-4">
+    <p class="mt-2 text-navy-700">Press and TV features on Liam Mind Care's work.</p>
+    <div class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
       {media.map((src) => (
         <div class="overflow-hidden rounded-xl border border-blue-200 bg-white shadow-sm">
-          <img src={src} alt="Media coverage of Liam Mind Care" class="h-56 w-full object-cover sm:h-72" loading="lazy" />
+          <img src={src} alt="Media coverage of Liam Mind Care" class="h-48 w-full object-cover sm:h-56" loading="lazy" />
         </div>
       ))}
     </div>
@@ -79,16 +96,32 @@ const community = [
 
   <section class="bg-blue-100/50 py-16">
     <div class="mx-auto max-w-6xl px-5 md:px-8">
-      <h2 class="font-serif text-2xl font-semibold text-navy-900">Community & School Engagement</h2>
-      <p class="mt-2 text-navy-700">Bringing mental health awareness into schools and communities.</p>
-      <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
-        {community.map((item) => (
-          <figure class="overflow-hidden rounded-2xl border border-blue-200 bg-white shadow-sm">
-            <img src={item.src} alt={item.caption} class="h-56 w-full object-cover" loading="lazy" />
-            <figcaption class="p-4 text-sm text-navy-700">{item.caption}</figcaption>
-          </figure>
+      <h2 class="font-serif text-2xl font-semibold text-navy-900">Rehabilitation & De-Addiction Outreach</h2>
+      <p class="mt-2 text-navy-700">
+        Community Awareness Programs on addiction, de-addiction, and rehabilitation for alcohol, tobacco, and
+        substance use — with the Department of Rehabilitation Psychology, Padamanayaka College of Special
+        Education.
+      </p>
+      <div class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
+        {rehabOutreach.map((src) => (
+          <div class="overflow-hidden rounded-xl border border-blue-200 bg-white shadow-sm">
+            <img src={src} alt="Rehabilitation and de-addiction community awareness program" class="h-44 w-full object-cover sm:h-56" loading="lazy" />
+          </div>
         ))}
       </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 py-16 md:px-8">
+    <h2 class="font-serif text-2xl font-semibold text-navy-900">Community & School Engagement</h2>
+    <p class="mt-2 text-navy-700">Bringing mental health awareness into schools and communities.</p>
+    <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+      {community.map((item) => (
+        <figure class="overflow-hidden rounded-2xl border border-blue-200 bg-white shadow-sm">
+          <img src={item.src} alt={item.caption} class="h-56 w-full object-cover" loading="lazy" />
+          <figcaption class="p-4 text-sm text-navy-700">{item.caption}</figcaption>
+        </figure>
+      ))}
     </div>
   </section>
 

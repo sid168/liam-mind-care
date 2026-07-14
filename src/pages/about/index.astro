@@ -53,6 +53,19 @@ const media = [
   "/images/media-coverage/media-1.jpeg",
   "/images/media-coverage/media-2.jpeg",
   "/images/media-coverage/media-3.jpeg",
+  "/images/media-coverage/media-7-aadab-telangana.jpeg",
+  "/images/media-coverage/media-8-etemaad-daily.jpeg",
+  "/images/media-coverage/media-4-akstv-1.jpeg",
+  "/images/media-coverage/media-5-akstv-2.jpeg",
+  "/images/media-coverage/media-6-99tv.jpeg",
+];
+
+const rehabOutreach = [
+  "/images/rehab-outreach/rehab-2.jpeg",
+  "/images/rehab-outreach/rehab-5.jpeg",
+  "/images/rehab-outreach/rehab-1.jpeg",
+  "/images/rehab-outreach/rehab-4.jpeg",
+  "/images/rehab-outreach/rehab-3.jpeg",
 ];
 ---
 
@@ -63,7 +76,7 @@ const media = [
   <section class="mx-auto max-w-5xl px-5 py-16 md:px-8">
     <div class="grid gap-10 md:grid-cols-[300px_1fr] md:items-start">
       <div class="mx-auto w-full max-w-[300px] overflow-hidden rounded-[2rem] shadow-sm md:mx-0">
-        <img src="/images/space/space-1.jpeg" alt="Iqra Ali's therapy office at Liam Mind Care" class="h-full w-full object-cover" />
+        <img src="/images/media-coverage/iqra-consultation.jpeg" alt="Iqra Ali in a client consultation at Liam Mind Care" class="h-full w-full object-cover" />
       </div>
       <div>
         <p class="text-xs font-semibold uppercase tracking-wide text-blue-600">About the Founder</p>
@@ -167,6 +180,22 @@ const media = [
           </div>
         ))}
       </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-5 py-16 md:px-8">
+    <h2 class="font-serif text-2xl font-semibold text-navy-900">Rehabilitation & De-Addiction Outreach</h2>
+    <p class="mt-2 text-navy-700">
+      Community Awareness Programs on addiction, de-addiction, and rehabilitation for alcohol, tobacco, and
+      substance use — presented by Iqra Ali with the Department of Rehabilitation Psychology, Padamanayaka
+      College of Special Education.
+    </p>
+    <div class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
+      {rehabOutreach.map((src) => (
+        <div class="overflow-hidden rounded-xl border border-blue-200 bg-white shadow-sm">
+          <img src={src} alt="Rehabilitation and de-addiction community awareness program" class="h-40 w-full object-cover sm:h-48" loading="lazy" />
+        </div>
+      ))}
     </div>
   </section>
 
