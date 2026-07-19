@@ -9,8 +9,8 @@ const pillars = [
   {
     title: "Emotional & Mental Health",
     href: "/services/individual-therapy/",
-    image: "/images/stock/yoga-woman.jpg",
-    imageAlt: "Woman practicing calm, mindful movement outdoors",
+    image: "/images/media-coverage/media-4-akstv-1.jpeg",
+    imageAlt: "Iqra Ali in a real counseling session, AKS TV feature",
     items: [
       "Anxiety, stress, depression & panic attacks",
       "OCD & intrusive thoughts",
@@ -23,8 +23,8 @@ const pillars = [
   {
     title: "Relationship & Family Support",
     href: "/services/couples-family-counseling/",
-    image: "/images/stock/family-playing.jpg",
-    imageAlt: "Family playing together in a cozy living room",
+    image: "/images/space/space-2.jpeg",
+    imageAlt: "Comfortable counseling room at Liam Mind Care",
     items: [
       "Relationship issues & marital conflict",
       "Couple counseling",
@@ -37,8 +37,8 @@ const pillars = [
   {
     title: "Child Psychology & Assessments",
     href: "/services/psychological-assessments/",
-    image: "/images/stock/lego-blocks.jpg",
-    imageAlt: "Child playing and building with blocks",
+    image: "/images/student-engagement/shri-ram-academy.jpeg",
+    imageAlt: "Iqra Ali leading a student wellness session at Shri Ram Academy",
     items: [
       "Child psychology & development",
       "Autism screening & assessment",
@@ -51,8 +51,8 @@ const pillars = [
   {
     title: "Lifestyle, Career & Growth",
     href: "/services/corporate-workplace-wellness/",
-    image: "/images/stock/team-meeting.jpg",
-    imageAlt: "Colleagues collaborating warmly over notebooks and coffee",
+    image: "/images/rehab-outreach/rehab-2.jpeg",
+    imageAlt: "Iqra Ali delivering a workshop on cognitive strategies for change",
     items: [
       "Career guidance & counseling",
       "Workplace mental health & burnout support",
@@ -185,7 +185,7 @@ const trustPoints = [
     <div class="mx-auto grid max-w-6xl items-center gap-10 px-5 md:grid-cols-2 md:px-8">
       <div class="order-2 md:order-1">
         <div class="aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-md">
-          <img src="/images/iqra-ali-portrait.jpeg" alt="Iqra Ali, PhD Scholar and founder of Liam Mind Care" class="h-full w-full object-cover object-top" />
+          <img src="/images/rehab-outreach/rehab-5.jpeg" alt="Iqra Ali, PhD Scholar and founder of Liam Mind Care, delivering a community workshop" class="h-full w-full object-cover object-top" />
         </div>
       </div>
       <div class="order-1 md:order-2">
@@ -223,6 +223,44 @@ const trustPoints = [
           <p class="mt-5 text-sm font-semibold uppercase tracking-wide text-blue-600">— {t.attribution}</p>
         </div>
       ))}
+    </div>
+  </section>
+
+  <section class="bg-blue-100/50 py-16">
+    <div class="mx-auto grid max-w-6xl items-center gap-10 px-5 md:grid-cols-2 md:px-8">
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-wide text-blue-600">For Schools, Colleges & Organizations</p>
+        <h2 class="mt-2 font-serif text-3xl font-semibold text-navy-900">Bring a Workshop to Your Organization</h2>
+        <p class="mt-4 leading-relaxed text-navy-700">
+          Iqra Ali regularly delivers mental health awareness workshops and community programs — from student
+          wellness seminars to de-addiction and rehabilitation awareness sessions — featured in local press and
+          TV coverage across Hyderabad and beyond.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a
+            href={`https://wa.me/${site.whatsappRaw}?text=${encodeURIComponent("Hi, I'd like to enquire about booking a mental health workshop for my organization/school.")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-full bg-navy-900 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-blue-600"
+          >
+            Book a Workshop
+          </a>
+          <a
+            href="/workshops/"
+            class="rounded-full border border-navy-800 px-7 py-3.5 text-sm font-semibold text-navy-900 transition-colors hover:bg-blue-100"
+          >
+            See Our Workshops
+          </a>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="aspect-square overflow-hidden rounded-2xl shadow-md">
+          <img src="/images/rehab-outreach/rehab-4.jpeg" alt="Community awareness workshop session" class="h-full w-full object-cover" />
+        </div>
+        <div class="mt-8 aspect-square overflow-hidden rounded-2xl shadow-md">
+          <img src="/images/student-engagement/shri-ram-academy.jpeg" alt="School mental health session at Shri Ram Academy" class="h-full w-full object-cover" />
+        </div>
+      </div>
     </div>
   </section>
 

@@ -1,0 +1,141 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTASection from "../../components/CTASection.astro";
+import { site } from "../../data/site";
+
+const topics = [
+  "Mental health awareness for students",
+  "Autism & ADHD awareness",
+  "De-addiction & relapse prevention (alcohol, tobacco, substance use)",
+  "Peace & conflict resolution",
+  "Workplace mental health & burnout",
+  "Parenting & child psychology",
+  "Anger management",
+  "Screen addiction",
+];
+
+const organizations = [
+  "Shri Ram Academy, Hyderabad",
+  "PM Shree GSSS Cheema Jodhpur School",
+  "Padamanayaka College of Special Education — Department of Rehabilitation Psychology",
+  "IIT Hyderabad (Health Psychology research collaboration)",
+];
+
+const press = [
+  { src: "/images/media-coverage/media-7-aadab-telangana.jpeg", caption: "Aadab Telangana Urdu Daily — Autism awareness talk" },
+  { src: "/images/media-coverage/media-8-etemaad-daily.jpeg", caption: "Etemaad Urdu Daily — Children's mental health awareness" },
+  { src: "/images/media-coverage/media-1.jpeg", caption: "Ajit Jalandhar — International online seminar, PM Shree School" },
+  { src: "/images/media-coverage/media-3.jpeg", caption: "Sting Operation News — School wellness seminar coverage" },
+  { src: "/images/media-coverage/media-4-akstv-1.jpeg", caption: "AKS TV — Counseling feature" },
+  { src: "/images/media-coverage/media-6-99tv.jpeg", caption: "99TV News — Strengthening Student Mental Health" },
+];
+
+const gallery = [
+  "/images/rehab-outreach/rehab-1.jpeg",
+  "/images/rehab-outreach/rehab-2.jpeg",
+  "/images/rehab-outreach/rehab-3.jpeg",
+  "/images/rehab-outreach/rehab-4.jpeg",
+  "/images/student-engagement/shri-ram-academy.jpeg",
+  "/images/student-engagement/gsss-cheema-jodhpur.jpeg",
+];
+
+const workshopMessage = encodeURIComponent(
+  "Hi, I'd like to enquire about booking a mental health workshop for my organization/school."
+);
+---
+
+<BaseLayout
+  title="Workshops & Community Programs | Liam Mind Care"
+  description="Book a mental health workshop for your school, college, or organization with Iqra Ali — covering student wellness, autism/ADHD awareness, de-addiction & relapse prevention, and workplace mental health. Featured in press and TV coverage."
+>
+  <section class="bg-blue-100/60 py-16">
+    <div class="mx-auto max-w-4xl px-5 text-center md:px-8">
+      <p class="text-xs font-semibold uppercase tracking-wide text-blue-600">For Schools, Colleges & Organizations</p>
+      <h1 class="mt-2 font-serif text-4xl font-semibold text-navy-900">Workshops & Community Programs</h1>
+      <p class="mx-auto mt-4 max-w-2xl text-navy-700">
+        Iqra Ali has delivered mental health awareness workshops and community programs across schools,
+        colleges, and rehabilitation institutions — featured in local press and TV coverage across Hyderabad and
+        beyond.
+      </p>
+      <div class="mt-7 flex flex-wrap justify-center gap-3">
+        <a
+          href={`https://wa.me/${site.whatsappRaw}?text=${workshopMessage}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rounded-full bg-navy-900 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-blue-600"
+        >
+          Book a Workshop
+        </a>
+        <a
+          href="/contact/"
+          class="rounded-full border border-navy-800 px-7 py-3.5 text-sm font-semibold text-navy-900 transition-colors hover:bg-blue-100"
+        >
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-5 py-16 md:px-8">
+    <h2 class="font-serif text-2xl font-semibold text-navy-900">Topics We Cover</h2>
+    <div class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+      {topics.map((t) => (
+        <div class="flex items-start gap-2 rounded-lg border border-blue-100 px-4 py-3 text-sm text-navy-700">
+          <span class="mt-0.5 shrink-0 text-blue-500">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          {t}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-blue-100/50 py-16">
+    <div class="mx-auto max-w-5xl px-5 md:px-8">
+      <h2 class="font-serif text-2xl font-semibold text-navy-900">Organizations We've Worked With</h2>
+      <ul class="mt-6 space-y-3">
+        {organizations.map((org) => (
+          <li class="flex items-start gap-3 rounded-xl bg-white px-5 py-4 text-navy-800 shadow-sm">
+            <span class="mt-0.5 shrink-0 text-blue-500">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            {org}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-5 py-16 md:px-8">
+    <h2 class="font-serif text-2xl font-semibold text-navy-900">As Featured In</h2>
+    <p class="mt-2 text-navy-700">Real press and TV coverage of our workshops and community programs.</p>
+    <div class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
+      {press.map((item) => (
+        <figure class="overflow-hidden rounded-xl border border-blue-200 bg-white shadow-sm">
+          <img src={item.src} alt={item.caption} class="h-40 w-full object-cover sm:h-48" loading="lazy" />
+          <figcaption class="p-3 text-xs text-navy-700">{item.caption}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-blue-100/50 py-16">
+    <div class="mx-auto max-w-5xl px-5 md:px-8">
+      <h2 class="font-serif text-2xl font-semibold text-navy-900">Workshops in Action</h2>
+      <div class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
+        {gallery.map((src) => (
+          <div class="overflow-hidden rounded-xl border border-blue-200 bg-white shadow-sm">
+            <img src={src} alt="Workshop or community program session" class="h-44 w-full object-cover sm:h-52" loading="lazy" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    heading="Ready to bring a workshop to your organization?"
+    subheading="Reach out to discuss topics, timing, and a tailored proposal for your school, college, or workplace."
+    whatsappLabel="Book a Workshop on WhatsApp"
+    whatsappMessage="Hi, I'd like to enquire about booking a mental health workshop for my organization/school."
+  />
+</BaseLayout>

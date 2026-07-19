@@ -33,6 +33,11 @@ const community = [
   { src: "/images/student-engagement/shri-ram-academy.jpeg", caption: "Peace & Conflict Resolution session at Shri Ram Academy, Hyderabad" },
   { src: "/images/student-engagement/gsss-cheema-jodhpur.jpeg", caption: "Mental health awareness session at PM Shree GSSS Cheema Jodhpur School" },
 ];
+const events = [
+  "/images/events/odyssey-solo.jpeg",
+  "/images/events/odyssey-group-1.jpeg",
+  "/images/events/odyssey-group-2.jpeg",
+];
 ---
 
 <BaseLayout
@@ -122,6 +127,23 @@ const community = [
           <figcaption class="p-4 text-sm text-navy-700">{item.caption}</figcaption>
         </figure>
       ))}
+    </div>
+  </section>
+
+  <section class="bg-blue-100/50 py-16">
+    <div class="mx-auto max-w-6xl px-5 md:px-8">
+      <h2 class="font-serif text-2xl font-semibold text-navy-900">Conferences & Events</h2>
+      <p class="mt-2 text-navy-700">
+        Odyssey 3.0 — Autism and Humanity: Every Life Has Value, a conference by Rainbow Children's Hospital's
+        Child Development Center (11–12 July 2026, Hyderabad).
+      </p>
+      <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+        {events.map((src) => (
+          <div class="overflow-hidden rounded-xl border border-blue-200 bg-white shadow-sm">
+            <img src={src} alt="Iqra Ali at the Odyssey 3.0 autism conference" class="h-56 w-full object-cover" loading="lazy" />
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 
