@@ -238,9 +238,7 @@ const trustPoints = [
         </p>
         <div class="mt-6 flex flex-wrap gap-3">
           <a
-            href={`https://wa.me/${site.whatsappRaw}?text=${encodeURIComponent("Hi, I'd like to enquire about booking a mental health workshop for my organization/school.")}`}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`mailto:${site.email}?subject=${encodeURIComponent("Workshop Enquiry")}&body=${encodeURIComponent("Hi, I'd like to enquire about booking a mental health workshop for my organization/school.")}`}
             class="rounded-full bg-navy-900 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-blue-600"
           >
             Book a Workshop
