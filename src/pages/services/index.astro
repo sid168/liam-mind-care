@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTASection from "../../components/CTASection.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
 
 const groups = [
   {
@@ -89,6 +90,7 @@ const groups = [
   title="Therapy & Counseling Services in Hyderabad"
   description="Explore Liam Mind Care's therapy services: individual therapy, couples & family counseling, teen counseling, and corporate workplace wellness — in Hyderabad and online."
 >
+  <Breadcrumbs items={[{ name: "Services", href: "/services/" }]} />
   <section class="mx-auto max-w-5xl px-5 py-16 text-center md:px-8">
     <h1 class="font-serif text-4xl font-semibold text-navy-900">Our Services</h1>
     <p class="mx-auto mt-4 max-w-2xl text-navy-700">

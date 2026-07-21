@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import CTASection from "../components/CTASection.astro";
+import JsonLd from "../components/JsonLd.astro";
 import { site } from "../data/site";
 
 interface Props {
@@ -28,10 +29,49 @@ const {
   concerns,
   format,
 } = Astro.props;
+
+const pagePath = Astro.url.pathname;
+const pageUrl = new URL(pagePath, site.url).toString();
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalTherapy",
+  name: heading,
+  description: intro,
+  url: pageUrl,
+  provider: {
+    "@type": "MedicalBusiness",
+    name: site.name,
+    url: site.url,
+    telephone: site.phoneRaw,
+  },
+  areaServed: site.serviceAreas,
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: site.url },
+    { "@type": "ListItem", position: 2, name: "Services", item: new URL("/services/", site.url).toString() },
+    { "@type": "ListItem", position: 3, name: heading, item: pageUrl },
+  ],
+};
 ---
 
 <BaseLayout title={seoTitle} description={seoDescription}>
+  <JsonLd data={serviceSchema} />
+  <JsonLd data={breadcrumbSchema} />
   <section class="bg-blue-100/60 py-14">
+    <div class="mx-auto max-w-5xl px-5 md:px-8">
+      <nav aria-label="Breadcrumb" class="mb-6 text-xs text-navy-700">
+        <a href="/" class="hover:text-blue-600">Home</a>
+        <span class="mx-1.5">/</span>
+        <a href="/services/" class="hover:text-blue-600">Services</a>
+        <span class="mx-1.5">/</span>
+        <span class="text-navy-900">{heading}</span>
+      </nav>
+    </div>
     <div class="mx-auto grid max-w-5xl items-center gap-8 px-5 md:grid-cols-[1.1fr_1fr] md:px-8">
       <div>
         <p class="text-xs font-semibold uppercase tracking-wide text-blue-600">{eyebrow}</p>

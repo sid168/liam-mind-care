@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTASection from "../../components/CTASection.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
 
 const credentials = [
   "PhD Scholar — Clinical Psychology",
@@ -79,6 +80,7 @@ const events = [
   title="About Iqra Ali | PhD Scholar & Psychologist, Liam Mind Care Hyderabad"
   description="Meet Iqra Ali, PhD Scholar in Clinical Psychology and founder of Liam Mind Care — 7+ years across clinical, educational, and corporate settings, with advanced training from Harvard Medical School."
 >
+  <Breadcrumbs items={[{ name: "About", href: "/about/" }]} />
   <section class="mx-auto max-w-5xl px-5 py-16 md:px-8">
     <div class="grid gap-10 md:grid-cols-[300px_1fr] md:items-start">
       <div class="mx-auto w-full max-w-[300px] overflow-hidden rounded-[2rem] shadow-sm md:mx-0">
@@ -160,14 +162,14 @@ const events = [
     <h2 class="font-serif text-2xl font-semibold text-navy-900">Published Work</h2>
     <div class="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
       <div class="flex gap-4 rounded-2xl border border-blue-100 p-5">
-        <img src="/images/books/mothering.png" alt="Mothering book cover by Iqra Ali" class="h-32 w-24 rounded-lg object-cover shadow" />
+        <img src="/images/books/mothering.jpg" alt="Mothering book cover by Iqra Ali" class="h-32 w-24 rounded-lg object-cover shadow" />
         <div>
           <h3 class="font-serif text-lg font-semibold text-navy-900">Mothering</h3>
           <p class="mt-1 text-sm text-navy-700">A guide to raising happy and confident children.</p>
         </div>
       </div>
       <div class="flex gap-4 rounded-2xl border border-blue-100 p-5">
-        <img src="/images/books/narcissism-unveiled.png" alt="Narcissism Unveiled book cover by Iqra Ali" class="h-32 w-24 rounded-lg object-cover shadow" />
+        <img src="/images/books/narcissism-unveiled.jpg" alt="Narcissism Unveiled book cover by Iqra Ali" class="h-32 w-24 rounded-lg object-cover shadow" />
         <div>
           <h3 class="font-serif text-lg font-semibold text-navy-900">Narcissism Unveiled</h3>
           <p class="mt-1 text-sm text-navy-700">From personal struggles to societal influence.</p>
