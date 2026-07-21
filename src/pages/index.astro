@@ -66,24 +66,29 @@ const pillars = [
 
 const testimonials = [
   {
-    quote: "From the very first session ma'am created a safe, welcoming space where I felt truly heard and understood.",
+    quote:
+      "From the very first session ma'am created a safe, welcoming space where I felt truly heard and understood.. Her ability to listen with empathy while offering thoughtful practical guidance has made a profound difference in my life.. What stands out most is her balance of professionalism and warmth.. Each session leaves me with a sense of clarity and hope.. If you're looking for someone who is compassionate, skilled and genuinely invested in your growth, Iqra ma'am is exceptional..!! 🫶🏻.",
     attribution: "Client H.",
   },
   {
-    quote: "On a scale 1–10, I was on 0 when we began the session and I was having a nervous breakdown.",
-    attribution: "Client S., UK",
+    quote:
+      "I'd say on s scale 1 – 10, I was on 0 when we began the session and I was having a nervous breakdown and panic attacks, the state that I was in, it could've been very hard for people to handle virtually but you dealt with it easily!\n\nWe started with identifying our triggers and then worked on emotional and physical regulation to gain clarity and figure out my real triggers whether it's really catastrophic or not.\n\nWe then did various grounding exercises and breath work.\n\nAlong side all of that and most importantly your great listening skills, empathetic approach and psycho-education helped me calm down a lot!\n\nForever grateful for all that!",
+    attribution: "Client S. from UK",
   },
   {
-    quote: "She has been really helpful in changing my thought process and listened to me efficiently.",
-    attribution: "Client N., India",
+    quote:
+      "She has been really helpful in changing my thought process and listened to me efficiently..I'm so glad I got the right help..she totally changed my life..she's the best therapist I came across..I highly recommend her!",
+    attribution: "Client N. from India",
   },
   {
-    quote: "You helped me untangle my thoughts! You helped me with my anxiety. Following your technique worked for me.",
-    attribution: "Client M., India",
+    quote:
+      "Iqra, when I felt I was caged inside myself! My thoughts were hurting me and I was so hopeless and helpless! I just looked up and prayed to god to send help! And then I found you. I went for it! I never considered therapy before, I was sceptical, scared and ashamed, kind of. But I convinced myself I need to do this. You helped me untangle my thoughts! You helped me with my anxiety. Following your technique worked for me indeed. But those worked temporarily! Till the time I listened to you! Till the time I talked to you!\n\nI believe therapy isn't just a course of medicine one take for a few days and everything is all right!\n\nMental health require consistent care, discipline to follow one's therapist advice and lots and lots of support.\n\nSo, Thank you for being there for me! Thank you for your amazing work! Thank you for your patience. Thank you for your support.",
+    attribution: "Client M. from India",
   },
   {
-    quote: "Mam spoke softly with me and I'm able to open up easily, the techniques she taught me was useful.",
-    attribution: "Client, India",
+    quote:
+      "I took the therapy for my anxiety , mam spoke softly with me and i'm able to open up easily , the techniques she taught me was useful and worked well . The therapy was really useful to me .",
+    attribution: "Client from India",
   },
 ];
 
@@ -215,11 +220,15 @@ const trustPoints = [
       <h2 class="font-serif text-3xl font-semibold text-navy-900">What Clients Say</h2>
       <p class="mx-auto mt-3 max-w-2xl text-navy-700">Real words from people who found their way to a calmer place.</p>
     </div>
-    <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-10 grid items-start gap-6 md:grid-cols-2 lg:grid-cols-3">
       {testimonials.map((t) => (
         <div class="flex flex-col rounded-3xl border border-blue-100 bg-white p-7">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="text-blue-300"><path d="M9.5 7C6.5 7 4 9.5 4 12.5c0 2.5 1.7 4.5 4 4.9-.3 1.4-1.3 2.4-2.6 2.9v1.7c3-.4 5.6-2.9 5.6-6.5V7H9.5Zm9 0c-3 0-5.5 2.5-5.5 5.5 0 2.5 1.7 4.5 4 4.9-.3 1.4-1.3 2.4-2.6 2.9v1.7c3-.4 5.6-2.9 5.6-6.5V7h-1.5Z" fill="currentColor"/></svg>
-          <p class="mt-4 flex-1 text-navy-700">"{t.quote}"</p>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="shrink-0 text-blue-300"><path d="M9.5 7C6.5 7 4 9.5 4 12.5c0 2.5 1.7 4.5 4 4.9-.3 1.4-1.3 2.4-2.6 2.9v1.7c3-.4 5.6-2.9 5.6-6.5V7H9.5Zm9 0c-3 0-5.5 2.5-5.5 5.5 0 2.5 1.7 4.5 4 4.9-.3 1.4-1.3 2.4-2.6 2.9v1.7c3-.4 5.6-2.9 5.6-6.5V7h-1.5Z" fill="currentColor"/></svg>
+          <div class="mt-4 flex-1 space-y-3 text-navy-700">
+            {t.quote.split("\n\n").map((para, i, arr) => (
+              <p>{i === 0 ? `"${para}` : para}{i === arr.length - 1 ? `"` : ""}</p>
+            ))}
+          </div>
           <p class="mt-5 text-sm font-semibold uppercase tracking-wide text-blue-600">— {t.attribution}</p>
         </div>
       ))}
