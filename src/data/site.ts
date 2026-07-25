@@ -8,10 +8,10 @@ export const site = {
   whatsappRaw: "919154200760",
   email: "therapybyiqra@liammindcare.com",
   address: {
-    line1: "Flat No. 502, 3-16/5/42 & 43",
+    line1: "3-16/5/42 & 43",
     line2: "Marva Township, Narsingi, Gandipet",
     line3: "R.R. District, Telangana, India",
-    full: "Flat No. 502, 3-16/5/42 & 43, Marva Township, Narsingi, Gandipet, R.R. Dist., Telangana, India",
+    full: "3-16/5/42 & 43, Marva Township, Narsingi, Gandipet, R.R. Dist., Telangana, India",
   },
   serviceAreas: ["Narsingi", "Gandipet", "Manikonda", "Kokapet", "Tolichowki", "Hyderabad"],
   hours: "By appointment only",
