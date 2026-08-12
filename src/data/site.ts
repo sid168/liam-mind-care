@@ -1,6 +1,7 @@
 export const site = {
   name: "Liam Mind Care",
-  tagline: "Therapy that meets you with care and clarity",
+  tagline: "Where every mind finds hope",
+  supportingTagline: "Therapy that meets you with care and clarity",
   founder: "Iqra Ali",
   founderTitle: "PhD Scholar (Clinical Psychology) & Founder, Liam Mind Care",
   phoneDisplay: "+91 91542 00760",

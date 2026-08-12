@@ -116,6 +116,32 @@ const events = [
     </div>
   </section>
 
+  <section class="mx-auto max-w-5xl px-5 pb-16 md:px-8">
+    <h2 class="text-center font-serif text-2xl font-semibold text-navy-900">Our Therapists</h2>
+    <div class="mt-8 grid gap-8 rounded-3xl border border-blue-100 p-7 md:grid-cols-[180px_1fr] md:items-start md:p-8">
+      <div class="mx-auto w-full max-w-[180px] overflow-hidden rounded-2xl shadow-sm md:mx-0">
+        <img src="/images/team/chaithanya-portrait.jpeg" alt="Singoju Chaithanya, Consultant Psychologist at Liam Mind Care" class="h-full w-full object-cover" />
+      </div>
+      <div>
+        <h3 class="font-serif text-xl font-semibold text-navy-900">Singoju Chaithanya, M.Phil.</h3>
+        <p class="mt-1 text-sm font-medium text-blue-600">Consultant Psychologist &amp; RCI Registered Rehabilitation Psychologist</p>
+        <p class="mt-4 text-sm leading-relaxed text-navy-700">
+          Holding an M.Phil. in Rehabilitation Psychology from NIEPID, Chaithanya brings extensive counseling
+          experience across hospitals, child development centres, and rehabilitation settings. He specializes
+          in psychological assessments, CBT, REBT, behaviour therapy, and parent guidance for children,
+          adolescents, and adults — known for his empathetic, patient-centred approach to building emotional
+          resilience and lasting well-being.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          {["Psychological & Neurodevelopmental Assessments", "CBT & REBT", "Behaviour Therapy", "Parent Guidance & Psychoeducation"].map((tag) => (
+            <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-navy-800">{tag}</span>
+          ))}
+        </div>
+        <p class="mt-4 text-xs text-navy-500">Languages: English, Telugu</p>
+      </div>
+    </div>
+  </section>
+
   <section class="bg-blue-100/50 py-16">
     <div class="mx-auto grid max-w-5xl gap-10 px-5 md:grid-cols-2 md:px-8">
       <div>
