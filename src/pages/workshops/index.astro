@@ -2,7 +2,15 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTASection from "../../components/CTASection.astro";
 import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import GoogleReviews from "../../components/GoogleReviews.astro";
 import { site } from "../../data/site";
+
+const workshopReviews = [
+  { name: "Psycho Buddy", time: "2 months ago", text: "We had the pleasure of hosting Ms. Iqra Ali as an eminent speaker for a mental health awareness session under the PM SHREE Scheme in Punjab. Her session was", truncated: true },
+  { name: "Suyash Bharti", time: "4 months ago", text: "I would like to sincerely appreciate Miss Iqra for the insightful session she conducted on forensic psychology for Latent Forensics. The session was", truncated: true },
+  { name: "Chityala Chakradhar", time: "2 months ago", text: "It's great honour to attend the most educative session on addiction by Iqra mam in our spandana rehabilitation centre", truncated: true },
+  { name: "Mahua Dasgupta", time: "2 weeks ago", text: "The session led by Ms Iqra Ali at The Shriram Academy was truly inspiring for our learners!", truncated: true },
+];
 
 const topics = [
   "Mental health awareness for students",
@@ -29,6 +37,13 @@ const press = [
   { src: "/images/media-coverage/media-3.jpeg", caption: "Sting Operation News — School wellness seminar coverage" },
   { src: "/images/media-coverage/media-4-akstv-1.jpeg", caption: "AKS TV — Counseling feature" },
   { src: "/images/media-coverage/media-6-99tv.jpeg", caption: "99TV News — Strengthening Student Mental Health" },
+  { src: "/images/media-coverage/media-9-girijana-samskruti.jpeg", caption: "Girijana Samskruti — Child mental health talk, DAWN High School" },
+  { src: "/images/media-coverage/media-10-abn-andhrajyothi.jpeg", caption: "ABN Andhrajyothi — Child mental health talk, DAWN High School" },
+  { src: "/images/media-coverage/media-11-vaartha.jpeg", caption: "Vaartha — Child mental health talk, DAWN High School" },
+  { src: "/images/media-coverage/media-12-one-nation.jpeg", caption: "One Nation Daily — Child mental health talk, DAWN High School" },
+  { src: "/images/media-coverage/media-13-vaastava-darshanam.jpeg", caption: "Vaastava Darshanam — Child mental health talk, DAWN High School" },
+  { src: "/images/media-coverage/media-14-praja-malupu.jpeg", caption: "Praja Malupu — Child mental health talk, DAWN High School" },
+  { src: "/images/media-coverage/media-15-saakshi.jpeg", caption: "Saakshi — Child mental health talk, DAWN High School" },
 ];
 
 const gallery = [
@@ -133,6 +148,8 @@ const workshopMailto = `mailto:${site.email}?subject=${workshopSubject}&body=${w
       </div>
     </div>
   </section>
+
+  <GoogleReviews reviews={workshopReviews} heading="What Organizers Say" />
 
   <CTASection
     heading="Ready to bring a workshop to your organization?"

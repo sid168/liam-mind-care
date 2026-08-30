@@ -3,7 +3,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import CTASection from "../components/CTASection.astro";
 import FAQItem from "../components/FAQItem.astro";
 import WaveDivider from "../components/WaveDivider.astro";
+import GoogleReviews from "../components/GoogleReviews.astro";
 import { site } from "../data/site";
+
+const googleReviews = [
+  { name: "Syeda Umm e Kulsum", time: "3 months ago", text: "Iqra has been a huge huge support system for me and my family. The most important thing is that she is a very good human being. She's a master of her field and", truncated: true },
+  { name: "Humaira Fatma", time: "5 months ago", text: "I've been in touch with iqra ma'am for a long period of time, and I must say she understands me in way that nobody does.. She's my safe place.. I feel no judgement from her.. And she's just amazing I wish I'd met her earlier.." },
+  { name: "Dr Yousuf Khan", time: "3 months ago", text: "Miss. Iqra Ali is an excellent author apart from a learned Psychologist. Her book MOTHERHOOD is really thought provoking and a great guide for parents to raise confident & happy kids." },
+  { name: "Nasha Ly", time: "5 months ago", text: "I was struggling a lot mentally and unable to think straight. miss iqra has helped me heal a lot and changed my perception over life ..I'm so grateful for her", truncated: true },
+  { name: "Shobha", time: "2 months ago", text: "Iqra Ma'am treats everyone has humane as possible. Her love towards patients and concern regarding their well being makes her a go to psychologist." },
+  { name: "Aditya", time: "a month ago", text: "I accompanied my friend to Liam Mind Care, and I am seeing a lot of improvement in her mental health. What stood out for her is that Iqra Ma'am was available", truncated: true },
+  { name: "Vandana Singh", time: "2 weeks ago", text: "Thankyou Liam mind care 🙏🏻" },
+  { name: "Shivansh Purohit", time: "2 weeks ago", text: "Iqra is truly an excellent person who creates a safe, welcoming, and comfortable environment. She is compassionate, understanding, and genuinely attentive,", truncated: true },
+];
 
 const pillars = [
   {
@@ -241,6 +253,8 @@ const trustPoints = [
       ))}
     </div>
   </section>
+
+  <GoogleReviews reviews={googleReviews} />
 
   <section class="bg-blue-100/50 py-16">
     <div class="mx-auto grid max-w-6xl items-center gap-10 px-5 md:grid-cols-2 md:px-8">

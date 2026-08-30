@@ -20,6 +20,7 @@ export const site = {
     instagram: "https://instagram.com/liammindcare",
     facebook: "https://facebook.com/liammindcare",
     linkedin: "https://linkedin.com/company/liammindcare",
+    googleReviews: "https://share.google/B6FWNk8AUV3TZlIs9",
   },
   url: "https://liammindcare.com",
 } as const;

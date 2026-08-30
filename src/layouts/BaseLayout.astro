@@ -34,11 +34,17 @@ const schema = {
   },
   areaServed: site.serviceAreas,
   priceRange: "$$",
-  sameAs: [site.social.instagram, site.social.facebook, site.social.linkedin],
+  sameAs: [site.social.instagram, site.social.facebook, site.social.linkedin, site.social.googleReviews],
   founder: {
     "@type": "Person",
     name: site.founder,
     jobTitle: "Psychologist, PhD Scholar (Clinical Psychology)",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5.0",
+    reviewCount: "15",
+    bestRating: "5",
   },
 };
 ---
