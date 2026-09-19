@@ -13,6 +13,7 @@ const credentials = [
   "Research Internship in Health Psychology — IIT Hyderabad & HACOS",
   "Community Mental Health Internship — Manastha Health Solutions",
   "NCHAP Registration (Verified) — No. 99-5283-8454-1027, 2026",
+  "3-Week OCD Counselling Training Programme — Emotion of Life (Aug–Sep 2026)",
 ];
 
 const approaches = [
@@ -42,12 +43,13 @@ const specializations = [
 ];
 
 const certificates = [
-  "/images/certificates/cert-1.jpeg",
-  "/images/certificates/cert-3.jpeg",
-  "/images/certificates/cert-9.jpeg",
-  "/images/certificates/cert-2.jpeg",
-  "/images/certificates/cert-6.jpeg",
-  "/images/certificates/cert-10.jpeg",
+  { src: "/images/certificates/cert-12-ocd-training.jpeg", caption: "3-Week OCD Counselling Training Programme — Emotion of Life" },
+  { src: "/images/certificates/cert-1.jpeg", caption: "Iqra Ali certification" },
+  { src: "/images/certificates/cert-3.jpeg", caption: "Iqra Ali certification" },
+  { src: "/images/certificates/cert-9.jpeg", caption: "Iqra Ali certification" },
+  { src: "/images/certificates/cert-2.jpeg", caption: "Iqra Ali certification" },
+  { src: "/images/certificates/cert-6.jpeg", caption: "Iqra Ali certification" },
+  { src: "/images/certificates/cert-10.jpeg", caption: "Iqra Ali certification" },
 ];
 
 const media = [
@@ -182,10 +184,13 @@ const events = [
         <a href="/gallery/" class="text-sm font-semibold text-blue-600 hover:text-blue-700">View full gallery →</a>
       </div>
       <div class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
-        {certificates.map((src) => (
-          <div class="overflow-hidden rounded-xl border border-blue-200 bg-white shadow-sm">
-            <img src={src} alt="Iqra Ali certification" class="h-40 w-full object-cover" loading="lazy" />
-          </div>
+        {certificates.map((c) => (
+          <figure class="overflow-hidden rounded-xl border border-blue-200 bg-white shadow-sm">
+            <img src={c.src} alt={c.caption} class="h-40 w-full object-cover" loading="lazy" />
+            {c.caption !== "Iqra Ali certification" && (
+              <figcaption class="p-2 text-center text-xs text-navy-700">{c.caption}</figcaption>
+            )}
+          </figure>
         ))}
       </div>
     </div>

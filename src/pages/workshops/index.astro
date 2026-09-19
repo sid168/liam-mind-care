@@ -49,15 +49,15 @@ const press = [
 ];
 
 const gallery = [
-  "/images/rehab-outreach/rehab-1.jpeg",
-  "/images/rehab-outreach/rehab-2.jpeg",
-  "/images/rehab-outreach/rehab-3.jpeg",
-  "/images/rehab-outreach/rehab-4.jpeg",
-  "/images/student-engagement/shri-ram-academy.jpeg",
-  "/images/student-engagement/gsss-cheema-jodhpur.jpeg",
-  "/images/rehab-outreach/high-risk-industry-1.jpeg",
-  "/images/rehab-outreach/high-risk-industry-2.jpeg",
-  "/images/rehab-outreach/high-risk-industry-3.jpeg",
+  { src: "/images/rehab-outreach/rehab-1.jpeg", caption: "Community Awareness Program on de-addiction and rehabilitation with the Department of Rehabilitation Psychology, Padamanayaka College of Special Education" },
+  { src: "/images/rehab-outreach/rehab-2.jpeg", caption: "Iqra Ali addressing participants during a rehabilitation and de-addiction outreach session" },
+  { src: "/images/rehab-outreach/rehab-3.jpeg", caption: "Group discussion during a community de-addiction awareness program" },
+  { src: "/images/rehab-outreach/rehab-4.jpeg", caption: "Rehabilitation Psychology outreach session in progress" },
+  { src: "/images/student-engagement/shri-ram-academy.jpeg", caption: "Peace & Conflict Resolution session at Shri Ram Academy, Hyderabad" },
+  { src: "/images/student-engagement/gsss-cheema-jodhpur.jpeg", caption: "Mental health awareness session at PM Shree GSSS Cheema Jodhpur School" },
+  { src: "/images/rehab-outreach/high-risk-industry-1.jpeg", caption: "Oil & gas industry workers attending the \"Managing Mental Health in High-Risk Sites\" session with FAST Solutions 4 Safety" },
+  { src: "/images/rehab-outreach/high-risk-industry-2.jpeg", caption: "Leadership and management team reviewing psychosocial risk and safe operations over video call" },
+  { src: "/images/rehab-outreach/high-risk-industry-3.jpeg", caption: "Interactive activity — \"Spot the Psychosocial Hazard\" — with FAST Solutions 4 Safety at a high-risk industrial site" },
 ];
 
 const workshopSubject = encodeURIComponent("Workshop Enquiry");
@@ -145,10 +145,11 @@ const workshopMailto = `mailto:${site.email}?subject=${workshopSubject}&body=${w
     <div class="mx-auto max-w-5xl px-5 md:px-8">
       <h2 class="font-serif text-2xl font-semibold text-navy-900">Workshops in Action</h2>
       <div class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
-        {gallery.map((src) => (
-          <div class="overflow-hidden rounded-xl border border-blue-200 bg-white shadow-sm">
-            <img src={src} alt="Workshop or community program session" class="h-44 w-full object-cover sm:h-52" loading="lazy" />
-          </div>
+        {gallery.map((item) => (
+          <figure class="overflow-hidden rounded-xl border border-blue-200 bg-white shadow-sm">
+            <img src={item.src} alt={item.caption} class="h-44 w-full object-cover sm:h-52" loading="lazy" />
+            <figcaption class="p-3 text-xs text-navy-700">{item.caption}</figcaption>
+          </figure>
         ))}
       </div>
     </div>

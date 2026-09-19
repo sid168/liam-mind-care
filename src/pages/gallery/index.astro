@@ -12,7 +12,10 @@ const instagramPosts = [
 ];
 
 const space = Array.from({ length: 8 }, (_, i) => `/images/space/space-${i + 1}.jpeg`);
-const certificates = Array.from({ length: 11 }, (_, i) => `/images/certificates/cert-${i + 1}.jpeg`);
+const certificates = [
+  ...Array.from({ length: 11 }, (_, i) => `/images/certificates/cert-${i + 1}.jpeg`),
+  "/images/certificates/cert-12-ocd-training.jpeg",
+];
 const media = [
   "/images/media-coverage/media-1.jpeg",
   "/images/media-coverage/media-2.jpeg",
